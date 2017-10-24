@@ -364,7 +364,7 @@ export default class TextField extends PureComponent {
 
       ...(disabled?
         { overflow: 'hidden' }:
-        { borderBottomColor, borderBottomWidth }),
+        {}),
 
       ...(props.multiline?
         { height: labelHeight + inputContainerPadding + height }:
@@ -472,8 +472,7 @@ export default class TextField extends PureComponent {
     return (
       <View {...containerProps}>
         <Animated.View {...inputContainerProps}>
-          {disabled && <Line type={disabledLineType} color={baseColor} />}
-
+          
           <Label {...labelProps}>{label}</Label>
 
           <View style={styles.row}>
